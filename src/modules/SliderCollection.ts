@@ -1,10 +1,19 @@
-import getParams from "@/utils/getParams"
+import getParams from "@/utils/helpers/getParams"
 import Swiper from "swiper"
 import { Navigation, Pagination, Scrollbar } from "swiper/modules"
 
 const rootSelector = '[data-js-slider]'
 
 class Slider {
+	rootElement
+	swiperElement
+	params
+	navigationElement: HTMLElement | null
+	prevButtonElement
+	nextButtonElement
+	paginationElement
+	scrollbarElement
+
 	selectors = {
 		root: rootSelector,
 		swiper: '[data-js-slider-swiper]',
@@ -15,16 +24,16 @@ class Slider {
 		scrollbar: '[data-js-slider-scrollbar]'
 	}
 
-	constructor(rootElement) {
+	constructor(rootElement: Element) {
 		this.rootElement = rootElement
-		this.swiperElement = this.rootElement.querySelector(this.selectors.swiper)
-		this.params = getParams(this.rootElement, this.selectors.root)
+		this.swiperElement = this.rootElement.querySelector(this.selectors.swiper) as HTMLElement
+		this.params = getParams(this.rootElement as HTMLElement, this.selectors.root)
 		this.navigationElement = this.params.navigationTargetElementId
 			? document.getElementById(this.params.navigationTargetElementId)
 			: this.rootElement.querySelector(this.selectors.navigation)
-		this.prevButtonElement = this.navigationElement.querySelector(this.selectors.prevButton)
-		this.nextButtonElement = this.navigationElement.querySelector(this.selectors.nextButton)
-		this.paginationElement = this.navigationElement.querySelector(this.selectors.pagination)
+		this.prevButtonElement = this.navigationElement?.querySelector(this.selectors.prevButton)
+		this.nextButtonElement = this.navigationElement?.querySelector(this.selectors.nextButton)
+		this.paginationElement = this.navigationElement?.querySelector(this.selectors.pagination)
 		this.scrollbarElement = this.rootElement.querySelector(this.selectors.scrollbar)
 		this.init()
 	}

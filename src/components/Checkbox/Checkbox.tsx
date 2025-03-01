@@ -1,6 +1,6 @@
 import "./Checkbox.scss"
 import {type CheckboxProps } from "./CheckboxProps";
-import getIdFromTitle from "@/utils/getIdFromTitle";
+import getIdFromTitle from "@/utils/helpers/getIdFromTitle";
 import cn from "classnames";
 
 export const Checkbox = (props: CheckboxProps) => {

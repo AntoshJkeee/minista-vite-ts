@@ -1,6 +1,6 @@
 import "./TabsNavigation.scss"
 import { type TabsNavigationProps } from "./TabsNavigationProps"
-import getIdFromTitle from "@/utils/getIdFromTitle"
+import getIdFromTitle from "@/utils/helpers/getIdFromTitle"
 import getTabsElementsIdsFromTitle from "@/components/Tabs/utils/getTabsElementsIdsFromTitle"
 import cn from "classnames"
 

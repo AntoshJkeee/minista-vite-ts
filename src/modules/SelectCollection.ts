@@ -1,5 +1,5 @@
 import BaseComponent from "./generic/BaseComponent";
-import MatchMedia from "../constants/MatchMedia";
+import MatchMedia from "@/utils/constants/MatchMedia";
 
 const rootSelector = '[data-js-select]'
 

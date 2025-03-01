@@ -1,4 +1,4 @@
-import { Section } from '@/layouts'
+import { Section } from "@/layouts"
 import { type PlansProps } from "./PlansProps";
 import { Grid, PlanCard, Tabs, TabsNavigation } from "@/components";
 

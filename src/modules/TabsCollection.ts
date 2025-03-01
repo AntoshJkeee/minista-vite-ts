@@ -1,10 +1,18 @@
-import getParams from "@/utils/getParams";
-import pxToRem from "@/utils/pxToRem";
+import getParams from "@/utils/helpers/getParams";
+import pxToRem from "@/utils/helpers/pxToRem";
 import BaseComponent from "@/modules/generic/BaseComponent";
 
 const rootSelector = '[data-js-tabs]'
 
-class Tabs extends BaseComponent{
+class Tabs extends BaseComponent {
+	rootElement
+	params
+	navigationElement: HTMLElement | null
+	state
+	limitTabIndex
+	buttonElements
+	contentElements
+
 	selectors = {
 		root: rootSelector,
 		navigation: '[data-js-tabs-navigation]',
@@ -21,19 +29,23 @@ class Tabs extends BaseComponent{
 		activeButtonOffsetLeft: '--tabsNavigationActiveButtonOffsetLeft'
 	}
 
-	constructor(rootElement) {
+	constructor(rootElement: Element) {
 		super();
 		this.rootElement = rootElement
-		this.params = getParams(this.rootElement, this.selectors.root)
+		this.params = getParams(this.rootElement as HTMLElement, this.selectors.root)
 		this.navigationElement = this.params.navigationTargetElementId
 		 ? document.getElementById(this.params.navigationTargetElementId)
 			: this.rootElement.querySelector(this.selectors.navigation)
-		this.buttonElements = [...this.navigationElement.querySelectorAll(this.selectors.button)]
+
+		this.buttonElements = [...this.navigationElement!.querySelectorAll(this.selectors.button)]
 		this.contentElements = [...this.rootElement.querySelectorAll(this.selectors.content)]
-		this.state = this.getProxyState({
-			activeTabIndex: this.buttonElements.findIndex(({ ariaSelected }) => ariaSelected )
-		})
-		this.limitTabIndex = this.buttonElements.length - 1
+
+		if (this.buttonElements) {
+			this.state = this.getProxyState({
+				activeTabIndex: this.buttonElements.findIndex(({ ariaSelected }) => ariaSelected )
+			})
+			this.limitTabIndex = this.buttonElements.length - 1
+		}
 		this.bindEvents()
 		setTimeout(this.bindObservers, 500)
 	}
@@ -41,11 +53,13 @@ class Tabs extends BaseComponent{
 	updateUI() {
 		const { activeTabIndex } = this.state
 
-		this.buttonElements.forEach((buttonElement, idx) => {
+		this.buttonElements?.forEach((buttonElement, idx) => {
 			const isActive = activeTabIndex === idx
 
 			buttonElement.classList.toggle(this.stateClasses.isActive, isActive)
+			// @ts-ignore
 			buttonElement.ariaSelected = isActive
+			// @ts-ignore
 			buttonElement.tabIndex = isActive ? 0 : -1
 
 			if(isActive) {
@@ -60,24 +74,24 @@ class Tabs extends BaseComponent{
 		})
 	}
 
-	updateNavigationSCCVars(activeButtonElement = this.buttonElements[this.state.activeTabIndex]) {
+	updateNavigationSCCVars(activeButtonElement = this.buttonElements?.[this.state.activeTabIndex]) {
 		const { width, left } = activeButtonElement.getBoundingClientRect()
-		const offsetLeft = left - this.navigationElement.getBoundingClientRect().left
+		const offsetLeft = left - this.navigationElement!.getBoundingClientRect().left
 
-		this.navigationElement.style.setProperty(
+		this.navigationElement!.style.setProperty(
 			this.stateCSSVariables.activeButtonWidth,
 			`${pxToRem(width)}rem`
 		)
 
-		this.navigationElement.style.setProperty(
+		this.navigationElement!.style.setProperty(
 			this.stateCSSVariables.activeButtonOffsetLeft,
 			`${pxToRem(offsetLeft)}rem`
 		)
 	}
 
-	activateTab(newTabIndex) {
-		this.state.activeTabIndex = newTabIndex
-		this.buttonElements[newTabIndex].focus()
+	activateTab(newTabIndex: number) {
+		this.state.activeTabIndex = newTabIndex;
+		(this.buttonElements?.[newTabIndex] as HTMLElement)?.focus();
 	}
 
 	previousTab = () => {
@@ -85,7 +99,7 @@ class Tabs extends BaseComponent{
 		? this.limitTabIndex
 		: this.state.activeTabIndex - 1
 
-		this.activateTab(newTabIndex)
+		this.activateTab(newTabIndex!)
 	}
 
 	nextTab = () => {
@@ -101,22 +115,25 @@ class Tabs extends BaseComponent{
 	}
 
 	lastTab = () => {
-		this.activateTab(this.limitTabIndex)
+		this.activateTab(this.limitTabIndex!)
 	}
 
-	onButtonClick(buttonIndex) {
+	onButtonClick(buttonIndex: number) {
 		this.state.activeTabIndex = buttonIndex
 	}
 
-	onKeyDown = (event) => {
+	onKeyDown = (event: KeyboardEvent) => {
 		const { target, code, metaKey } = event
 		const isTabsContentFocused = this.contentElements
 			.some((contentElement) => contentElement === target)
-		const isTabsButtonFocused = this.buttonElements
-			.some((buttonElement) => buttonElement === target)
 
-		if(!isTabsContentFocused && !isTabsButtonFocused) {
-			return
+		if(this.buttonElements) {
+			const isTabsButtonFocused = this.buttonElements
+				.some((buttonElement) => buttonElement === target)
+
+			if(!isTabsContentFocused && !isTabsButtonFocused) {
+				return
+			}
 		}
 
 		const action = {
@@ -147,7 +164,7 @@ class Tabs extends BaseComponent{
 	}
 
 	bindEvents() {
-		this.buttonElements.forEach((buttonElement, idx) => {
+		this.buttonElements?.forEach((buttonElement, idx) => {
 			buttonElement.addEventListener('click', () => this.onButtonClick(idx))
 		})
 
@@ -161,7 +178,7 @@ class Tabs extends BaseComponent{
 	bindObservers = () => {
 		const resizeObserver = new ResizeObserver(this.onResize)
 
-		resizeObserver.observe(this.navigationElement)
+		resizeObserver.observe(this.navigationElement as Element)
 	}
 }
 

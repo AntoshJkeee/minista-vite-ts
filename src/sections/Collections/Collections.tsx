@@ -2,7 +2,7 @@ import "./Collections.scss"
 import { type CollectionsProps } from "./CollectionsProps";
 import { Tabs, SliderNavigation, Slider, CategoryCard, MovieCard } from "@/components"
 import { Section } from "@/layouts"
-import getIdFromTitle from "@/utils/getIdFromTitle"
+import getIdFromTitle from "@/utils/helpers/getIdFromTitle"
 
 export const Collections = (props: CollectionsProps) => {
   const {

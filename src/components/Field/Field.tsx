@@ -1,6 +1,6 @@
 import "./Field.scss"
 import { type FieldProps } from "@/components/Field/FieldProps";
-import getIdFromTitle from "@/utils/getIdFromTitle"
+import getIdFromTitle from "@/utils/helpers/getIdFromTitle"
 import cn from "classnames"
 
 export const Field = (props: FieldProps) => {

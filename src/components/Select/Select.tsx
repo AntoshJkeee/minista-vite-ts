@@ -1,6 +1,6 @@
 import "./Select.scss"
 import { type SelectProps } from "./SelectProps";
-import getIdFromTitle from "@/utils/getIdFromTitle"
+import getIdFromTitle from "@/utils/helpers/getIdFromTitle"
 import classNames from "classnames"
 
 export const Select = (props: SelectProps) => {

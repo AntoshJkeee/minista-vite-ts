@@ -137,12 +137,18 @@ export default defineConfig({
 		},
 	},
 	vite: {
+		resolve: {
+			extensions: ['.js', '.ts', '.tsx', '.jsx']
+		},
 		build: {
 			rollupOptions: {
 				output: {
 					chunkFileNames: `assets/[name].js`
 				}
 			}
+		},
+		css: {
+			devSourcemap: true
 		}
 	},
 })
