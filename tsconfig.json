@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "noErrorTruncation": true,
+    "jsx": "react-jsx",
+    "types": ["minista/client"],
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictLiteralTypes": true,
+    "strictTemplateLiteralTypes": true,
+    "strictObjectLiteralAssignment": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["./minista.config.ts", "src"]
+}

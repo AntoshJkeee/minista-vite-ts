@@ -1,0 +1,37 @@
+@use 'constants' as *;
+@use 'sass:math';
+
+/*
+  fluid функция принимает 3 значения
+
+  $max: максимальное значение элемента в пикселях в десктопной версии
+  $min: минимальное значение элемента в пикселях в мобильной версии
+  $isEndOfLaptop: флаг для необходимости остановиться на среднем брейкпоинте
+
+*/
+@function fluid($max: 100, $min: 10, $isEndOfLaptop: false) {
+  $maxViewportWidth: 1600;
+  $minViewportWidth: 390;
+
+  @if ($isEndOfLaptop) {
+    $minViewportWidth: $container-laptop-width;
+  }
+
+  $maxSize: math.div($max, 16);
+  $minSize: math.div($min, 16);
+  $maxWidth: math.div($maxViewportWidth, 16);
+  $minWidth: math.div($minViewportWidth, 16);
+
+  $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
+  $yAxisIntersections: -$minWidth * $slope + $minSize;
+
+  @return clamp(
+    #{$minSize * 1rem},
+    #{$yAxisIntersections * 1rem} + #{$slope * 100vw},
+    #{$maxSize * 1rem}
+  );
+}
+
+@function fluid-to-laptop($max: 100, $min: 10) {
+  @return fluid($max, $min, true)
+}
