@@ -1,6 +1,9 @@
 const rootSelector = '[data-js-overlay-menu]'
 
 export class OverlayMenu {
+	rootElement: HTMLElement
+	dialogElement: HTMLDialogElement
+	burgerButtonElement: HTMLElement
 	selectors = {
 		root: rootSelector,
 		dialog: '[data-js-overlay-menu-dialog]',
@@ -13,9 +16,9 @@ export class OverlayMenu {
 	}
 
 	constructor() {
-		this.rootElement = document.querySelector(this.selectors.root)
-		this.dialogElement = this.rootElement.querySelector(this.selectors.dialog)
-		this.burgerButtonElement = this.rootElement.querySelector(this.selectors.burgerButton)
+		this.rootElement = document.querySelector(this.selectors.root) as HTMLElement
+		this.dialogElement = this.rootElement?.querySelector(this.selectors.dialog) as HTMLDialogElement
+		this.burgerButtonElement = this.rootElement.querySelector(this.selectors.burgerButton) as HTMLElement
 		this.bindEvents()
 	}
 

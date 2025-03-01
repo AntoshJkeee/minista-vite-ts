@@ -4,6 +4,13 @@ import MatchMedia from "../constants/MatchMedia";
 const rootSelector = '[data-js-select]'
 
 class Select extends BaseComponent {
+  rootElement
+  originalControlElement: HTMLSelectElement
+  buttonElement: HTMLDivElement
+  dropdownElement
+  optionElements
+  state: any
+
   selectors = {
     root: rootSelector,
     originalControl: '[data-js-select-original-control]',
@@ -26,12 +33,12 @@ class Select extends BaseComponent {
     selectedOptionElement: null,
   }
 
-  constructor(rootElement) {
+  constructor(rootElement: Element) {
     super()
     this.rootElement = rootElement
-    this.originalControlElement = this.rootElement.querySelector(this.selectors.originalControl)
-    this.buttonElement = this.rootElement.querySelector(this.selectors.button)
-    this.dropdownElement = this.rootElement.querySelector(this.selectors.dropdown)
+    this.originalControlElement = this.rootElement.querySelector(this.selectors.originalControl) as HTMLSelectElement
+    this.buttonElement = this.rootElement.querySelector(this.selectors.button) as HTMLDivElement
+    this.dropdownElement = this.rootElement.querySelector(this.selectors.dropdown) as HTMLElement
     this.optionElements = this.dropdownElement.querySelectorAll(this.selectors.option)
     this.state = this.getProxyState({
       ...this.initialState,
@@ -60,6 +67,7 @@ class Select extends BaseComponent {
       this.buttonElement.textContent = newSelectedOptionValue
       this.buttonElement.classList.toggle(this.stateClasses.isExpanded, isExpanded)
       this.buttonElement.ariaExpanded = isExpanded
+      // @ts-ignore
       this.buttonElement.ariaActiveDescendant = this.optionElements[currentOptionIndex].id
     }
 
@@ -74,7 +82,7 @@ class Select extends BaseComponent {
 
         optionElement.classList.toggle(this.stateClasses.isCurrent, isCurrent)
         optionElement.classList.toggle(this.stateClasses.isSelected, isSelected)
-        optionElement.ariaSelected = isSelected
+        optionElement.setAttribute('aria-selected', isSelected ? 'true' : 'false')
       })
     }
 
@@ -131,7 +139,7 @@ class Select extends BaseComponent {
     this.state.selectedOptionElement = this.optionElements[this.state.currentOptionIndex]
   }
 
-  onMobileMatchMediaChange = (event) => {
+  onMobileMatchMediaChange = (event: MediaQueryListEvent) => {
     this.updateTabIndexes(event.matches)
   }
 
@@ -143,24 +151,26 @@ class Select extends BaseComponent {
     this.toggleExpandedState()
   }
 
-  onClick = (event) => {
+  onClick = (event: MouseEvent) => {
     const { target } = event
 
     const isButtonClick = target === this.buttonElement
-    const isOutsideDropdownClick = target.closest(this.selectors.dropdown) !== this.dropdownElement
+    if (target) {
+      const isOutsideDropdownClick = (target as HTMLElement).closest(this.selectors.dropdown) !== this.dropdownElement
 
-    if (!isButtonClick && isOutsideDropdownClick) {
-      this.collapse()
-      return
-    }
+      if (!isButtonClick && isOutsideDropdownClick) {
+        this.collapse()
+        return
+      }
 
-    const isOptionClick = target.matches(this.selectors.option)
+      const isOptionClick = (target as HTMLElement).matches(this.selectors.option)
 
-    if (isOptionClick) {
-      this.state.selectedOptionElement = target
-      this.state.currentOptionIndex = [...this.optionElements]
-        .findIndex((optionElement) => optionElement === target)
-      this.collapse()
+      if (isOptionClick) {
+        this.state.selectedOptionElement = target
+        this.state.currentOptionIndex = [...this.optionElements]
+          .findIndex((optionElement) => optionElement === target)
+        this.collapse()
+      }
     }
   }
 
@@ -210,7 +220,7 @@ class Select extends BaseComponent {
     this.collapse()
   }
 
-  onKeyDown = (event) => {
+  onKeyDown = (event: KeyboardEvent) => {
     const { code } = event
 
     const action = {
@@ -232,6 +242,7 @@ class Select extends BaseComponent {
     this.originalControlElement.addEventListener('change', this.onOriginalControlChange)
     this.buttonElement.addEventListener('click', this.onButtonClick)
     document.addEventListener('click', this.onClick)
+    // @ts-ignore
     this.rootElement.addEventListener('keydown', this.onKeyDown)
   }
 }

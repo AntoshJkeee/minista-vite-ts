@@ -5,7 +5,7 @@ class BaseComponent {
 		}
 	}
 
-	getProxyState(initialState) {
+	getProxyState(initialState: any) {
 		return new Proxy(initialState, {
 			get: (target, prop) => {
 				return target[prop]

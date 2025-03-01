@@ -1,14 +1,15 @@
 import getAttrNameFromSelector from "@/utils/getAttrNameFromSelector";
-import IMask from "imask";
+import IMask, {InputMaskElement} from "imask";
 
 const rootSelector = '[data-js-input-mask]'
 
 class InputMask {
+  rootElement
   selectors = {
     root: rootSelector,
   }
 
-  constructor(rootElement) {
+  constructor(rootElement: Element) {
     this.rootElement = rootElement
     this.init()
   }
@@ -18,7 +19,10 @@ class InputMask {
         getAttrNameFromSelector(this.selectors.root)
     )
 
-    IMask(this.rootElement, { mask })
+    if(mask) {
+
+      IMask(this.rootElement as InputMaskElement, { mask })
+    }
   }
 }
 

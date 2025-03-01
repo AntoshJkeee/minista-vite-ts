@@ -1,6 +1,9 @@
 const rootSelector = '[data-js-video-player]'
 
 class VideoPlayer {
+	rootElement
+	videoElement: HTMLVideoElement
+	playButtonElement: HTMLButtonElement
 	selectors = {
 		root: rootSelector,
 		video: '[data-js-video-player-video]',
@@ -11,10 +14,10 @@ class VideoPlayer {
 		isActive: 'is-active',
 	}
 
-	constructor(rootElement) {
+	constructor(rootElement: Element) {
 		this.rootElement = rootElement
-		this.videoElement = this.rootElement.querySelector(this.selectors.video)
-		this.playButtonElement = this.rootElement.querySelector(this.selectors.playButton)
+		this.videoElement = this.rootElement.querySelector(this.selectors.video) as HTMLVideoElement
+		this.playButtonElement = this.rootElement.querySelector(this.selectors.playButton) as HTMLButtonElement
 		this.bindEvents()
 	}
 
