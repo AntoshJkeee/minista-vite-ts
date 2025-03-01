@@ -36,9 +36,10 @@ interface MovieItem {
 	rating?: { value: number, label: string }
 }
 
+// в табах
 interface PlansItems {
 	title: string
-	isActive?: boolean
+	isActive: boolean
 	items: PlansItem[]
 }
 

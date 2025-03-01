@@ -1,7 +1,5 @@
-// import { Children } from "react";
-
 export interface SliderProps {
-	children: any // TODO React.ReactNode | React.ReactNode[] ПЕРЕДАВАТЬ КОРРЕКТНЫЙ ТИП
+	children: any // TODO ИСПРАВИТЬ
 	navigationTargetElementId?: null | string
 	sliderParams?: SliderParams;
 	isBeyondTheViewportOnMobileS?: boolean
