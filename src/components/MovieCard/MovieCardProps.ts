@@ -1,5 +1,3 @@
-import React from "react";
-
 export interface MovieCardProps {
 	title: MovieItem['title'];
 	imgSrc: MovieItem['imgSrc'];
@@ -7,6 +5,6 @@ export interface MovieCardProps {
 	views?: MovieItem['views']
 	released?: MovieItem['released'],
 	rating?: MovieItem['rating'],
-	season?: React.ReactNode,
+	season?: JSX.Element,
 	href?: '/movie' | string,
 }

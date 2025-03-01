@@ -1,9 +1,7 @@
-import React from "react";
-
 export interface AccordionGroupProps {
 	className?: string
 	mode?: '' | 'dark'
 	columns?: number
-	children: React.ReactNode[]
+	children: JSX.Element[]
 	isOrderedList?: boolean
 }

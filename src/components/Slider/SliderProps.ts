@@ -1,5 +1,5 @@
 export interface SliderProps {
-	children: any // TODO ИСПРАВИТЬ
+	children: JSX.Element[];
 	navigationTargetElementId?: null | string
 	sliderParams?: SliderParams;
 	isBeyondTheViewportOnMobileS?: boolean

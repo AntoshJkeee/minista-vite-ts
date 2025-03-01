@@ -1,6 +1,4 @@
-import React from "react";
-
 export interface ContentProps {
-	children: React.ReactNode
+	children: JSX.Element | JSX.Element[];
 	isResetPaddingTop: boolean
 }

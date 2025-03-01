@@ -3,7 +3,6 @@ import "./Slider.scss"
 import { type SliderProps } from "./SliderProps";
 import { SliderNavigation } from "@/components";
 import cn from "classnames";
-import {ReactNode} from "react";
 
 const defaultSliderParams = {
 	slidesPerView: 5,
@@ -59,7 +58,7 @@ export const Slider = (props: SliderProps) => {
 		>
 			<div className="slider__swiper swiper" data-js-slider-swiper=''>
 				<ul className="slider__list swiper-wrapper">
-					{children && children.map((slide: JSX.Element, idx: number) => (
+					{children && children.map((slide, idx) => (
 						<li className='slider__item swiper-slide' key={idx}>
 							{slide}
 						</li>

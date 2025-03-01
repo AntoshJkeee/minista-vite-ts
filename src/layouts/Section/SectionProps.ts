@@ -5,7 +5,7 @@ export interface SectionProps {
 	title: string
 	titleId: string
 	description?: string
-	actions?: React.ReactNode
+	actions?: JSX.Element
 	isActionsHiddenOnMobile?: boolean
-	children: React.ReactNode
+	children: JSX.Element
 }

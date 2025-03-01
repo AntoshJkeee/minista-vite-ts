@@ -1,7 +1,5 @@
-import React from "react";
-
 export interface MovieDetailsProps {
-	seasons?: React.ReactNode
+	seasons?: JSX.Element
 	castItems: { imgSrc: string, imgAlt: string }[],
 	reviewItems: {
 		name: string
