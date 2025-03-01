@@ -1,6 +1,6 @@
 import getParams from "@/utils/helpers/getParams";
 import pxToRem from "@/utils/helpers/pxToRem";
-import BaseComponent from "@/modules/generic/BaseComponent";
+import BaseComponent from "@/utils/modules/generic/BaseComponent";
 
 const rootSelector = '[data-js-tabs]'
 
