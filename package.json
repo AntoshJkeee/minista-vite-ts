@@ -6,7 +6,7 @@
     "start": "minista --host --port 3000 --open /list-pages",
     "build": "minista build",
     "preview": "minista preview",
-    "lint": "npx eslint \"*/**.tsx\"",
+    "lint": "npx eslint \"*/**.{ts,tsx,jsx}\"",
     "install": "git config core.hooksPath .git-hooks"
   },
   "devDependencies": {
