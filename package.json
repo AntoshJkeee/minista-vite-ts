@@ -5,24 +5,36 @@
   "scripts": {
     "start": "minista --host --port 3000 --open /list-pages",
     "build": "minista build",
-    "preview": "minista preview"
+    "preview": "minista preview",
+    "lint": "npx eslint \"*/**.tsx\""
   },
   "devDependencies": {
+    "@eslint/js": "^9.21.0",
     "@types/node": "^22.13.5",
     "@types/react": "^18.2.16",
     "@types/react-dom": "^18.2.7",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react": "^7.37.4",
+    "globals": "^16.0.0",
+    "lint-staged": "^15.4.3",
     "minista": "^3.1.12",
     "postcss-preset-env": "^10.1.4",
     "postcss-pxtorem": "^6.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.81.0",
-    "typescript": "^5.1.6"
+    "typescript": "^5.1.6",
+    "typescript-eslint": "^8.25.0"
   },
   "dependencies": {
     "@a1rth/css-normalize": "^1.1.9",
     "classnames": "^2.5.1",
     "imask": "^7.6.1",
     "swiper": "^11.1.15"
+  },
+  "lint-staged": {
+    "*.{js,ts, tsx}": [
+      "node_modules/.bin/eslint --max-warnings=0"
+    ]
   }
 }
