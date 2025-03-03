@@ -3,5 +3,5 @@ export interface EpisodeCardProps {
 	title: string
 	description: string
 	duration: string
-	video: { src: string, poster: string }
+	video: { src: string; poster: string }
 }

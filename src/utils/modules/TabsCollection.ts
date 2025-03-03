@@ -1,6 +1,6 @@
-import getParams from "@/utils/helpers/getParams";
-import pxToRem from "@/utils/helpers/pxToRem";
-import BaseComponent from "@/utils/modules/generic/BaseComponent";
+import getParams from '@/utils/helpers/getParams'
+import pxToRem from '@/utils/helpers/pxToRem'
+import BaseComponent from '@/utils/modules/generic/BaseComponent'
 
 const rootSelector = '[data-js-tabs]'
 
@@ -21,20 +21,20 @@ class Tabs extends BaseComponent {
 	}
 
 	stateClasses = {
-		isActive: 'is-active'
+		isActive: 'is-active',
 	}
 
 	stateCSSVariables = {
 		activeButtonWidth: '--tabsNavigationActiveButtonWidth',
-		activeButtonOffsetLeft: '--tabsNavigationActiveButtonOffsetLeft'
+		activeButtonOffsetLeft: '--tabsNavigationActiveButtonOffsetLeft',
 	}
 
 	constructor(rootElement: Element) {
-		super();
+		super()
 		this.rootElement = rootElement
 		this.params = getParams(this.rootElement as HTMLElement, this.selectors.root)
 		this.navigationElement = this.params.navigationTargetElementId
-		 ? document.getElementById(this.params.navigationTargetElementId)
+			? document.getElementById(this.params.navigationTargetElementId)
 			: this.rootElement.querySelector(this.selectors.navigation)
 
 		this.buttonElements = [...this.navigationElement!.querySelectorAll(this.selectors.button)]
@@ -42,7 +42,7 @@ class Tabs extends BaseComponent {
 
 		if (this.buttonElements) {
 			this.state = this.getProxyState({
-				activeTabIndex: this.buttonElements.findIndex(({ ariaSelected }) => ariaSelected )
+				activeTabIndex: this.buttonElements.findIndex(({ ariaSelected }) => ariaSelected),
 			})
 			this.limitTabIndex = this.buttonElements.length - 1
 		}
@@ -62,7 +62,7 @@ class Tabs extends BaseComponent {
 			// @ts-ignore
 			buttonElement.tabIndex = isActive ? 0 : -1
 
-			if(isActive) {
+			if (isActive) {
 				this.updateNavigationSCCVars(buttonElement)
 			}
 		})
@@ -78,10 +78,7 @@ class Tabs extends BaseComponent {
 		const { width, left } = activeButtonElement.getBoundingClientRect()
 		const offsetLeft = left - this.navigationElement!.getBoundingClientRect().left
 
-		this.navigationElement!.style.setProperty(
-			this.stateCSSVariables.activeButtonWidth,
-			`${pxToRem(width)}rem`
-		)
+		this.navigationElement!.style.setProperty(this.stateCSSVariables.activeButtonWidth, `${pxToRem(width)}rem`)
 
 		this.navigationElement!.style.setProperty(
 			this.stateCSSVariables.activeButtonOffsetLeft,
@@ -90,22 +87,18 @@ class Tabs extends BaseComponent {
 	}
 
 	activateTab(newTabIndex: number) {
-		this.state.activeTabIndex = newTabIndex;
-		(this.buttonElements?.[newTabIndex] as HTMLElement)?.focus();
+		this.state.activeTabIndex = newTabIndex
+		;(this.buttonElements?.[newTabIndex] as HTMLElement)?.focus()
 	}
 
 	previousTab = () => {
-		const newTabIndex = this.state.activeTabIndex === 0
-		? this.limitTabIndex
-		: this.state.activeTabIndex - 1
+		const newTabIndex = this.state.activeTabIndex === 0 ? this.limitTabIndex : this.state.activeTabIndex - 1
 
 		this.activateTab(newTabIndex!)
 	}
 
 	nextTab = () => {
-		const newTabIndex = this.state.activeTabIndex === this.limitTabIndex
-		? 0
-		: this.state.activeTabIndex + 1
+		const newTabIndex = this.state.activeTabIndex === this.limitTabIndex ? 0 : this.state.activeTabIndex + 1
 
 		this.activateTab(newTabIndex)
 	}
@@ -124,14 +117,12 @@ class Tabs extends BaseComponent {
 
 	onKeyDown = (event: KeyboardEvent) => {
 		const { target, code, metaKey } = event
-		const isTabsContentFocused = this.contentElements
-			.some((contentElement) => contentElement === target)
+		const isTabsContentFocused = this.contentElements.some((contentElement) => contentElement === target)
 
-		if(this.buttonElements) {
-			const isTabsButtonFocused = this.buttonElements
-				.some((buttonElement) => buttonElement === target)
+		if (this.buttonElements) {
+			const isTabsButtonFocused = this.buttonElements.some((buttonElement) => buttonElement === target)
 
-			if(!isTabsContentFocused && !isTabsButtonFocused) {
+			if (!isTabsContentFocused && !isTabsButtonFocused) {
 				return
 			}
 		}
@@ -144,20 +135,20 @@ class Tabs extends BaseComponent {
 		}[code]
 
 		const isMacHomeKey = metaKey && code === 'ArrowLeft'
-		if(isMacHomeKey) {
+		if (isMacHomeKey) {
 			event.preventDefault()
 			this.firstTab()
 			return
 		}
 
 		const isMacEndKey = metaKey && code === 'ArrowRight'
-		if(isMacEndKey) {
+		if (isMacEndKey) {
 			event.preventDefault()
 			this.lastTab()
 			return
 		}
 
-		if(action) {
+		if (action) {
 			event.preventDefault()
 			action()
 		}

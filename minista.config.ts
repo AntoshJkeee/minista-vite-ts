@@ -1,5 +1,5 @@
-import { defineConfig } from "minista"
-import path from "path"
+import { defineConfig } from 'minista'
+import path from 'path'
 
 export default defineConfig({
 	root: '',
@@ -15,7 +15,7 @@ export default defineConfig({
 			remoteName: 'remote',
 			optimize: {
 				layout: 'constrained',
-				breakpoints: [ 320, 768, 1024, 1440 ],
+				breakpoints: [320, 768, 1024, 1440],
 				resolution: [1, 2],
 				format: 'inherit',
 				formatOptions: {},
@@ -60,10 +60,12 @@ export default defineConfig({
 		},
 	},
 	resolve: {
-		alias: [{
-			find: '@/',
-			replacement: path.resolve('src') + '/',
-		}],
+		alias: [
+			{
+				find: '@/',
+				replacement: path.resolve('src') + '/',
+			},
+		],
 	},
 	css: {
 		modules: {
@@ -138,17 +140,17 @@ export default defineConfig({
 	},
 	vite: {
 		resolve: {
-			extensions: ['.js', '.ts', '.tsx', '.jsx']
+			extensions: ['.js', '.ts', '.tsx', '.jsx'],
 		},
 		build: {
 			rollupOptions: {
 				output: {
-					chunkFileNames: `assets/[name].js`
-				}
-			}
+					chunkFileNames: `assets/[name].js`,
+				},
+			},
 		},
 		css: {
-			devSourcemap: true
-		}
+			devSourcemap: true,
+		},
 	},
 })

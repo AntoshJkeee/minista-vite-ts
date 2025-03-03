@@ -15,7 +15,7 @@ export const MoviesStore = {
 									'/src/assets/images/categories/action/2.jpg',
 									'/src/assets/images/categories/action/3.jpg',
 									'/src/assets/images/categories/action/4.jpg',
-								]
+								],
 							},
 							{
 								title: 'Adventure',
@@ -24,7 +24,7 @@ export const MoviesStore = {
 									'/src/assets/images/categories/action/2.jpg',
 									'/src/assets/images/categories/action/3.jpg',
 									'/src/assets/images/categories/action/4.jpg',
-								]
+								],
 							},
 							{
 								title: 'Comedy',
@@ -33,7 +33,7 @@ export const MoviesStore = {
 									'/src/assets/images/categories/action/2.jpg',
 									'/src/assets/images/categories/action/3.jpg',
 									'/src/assets/images/categories/action/4.jpg',
-								]
+								],
 							},
 							{
 								title: 'Drama',
@@ -42,7 +42,7 @@ export const MoviesStore = {
 									'/src/assets/images/categories/action/2.jpg',
 									'/src/assets/images/categories/action/3.jpg',
 									'/src/assets/images/categories/action/4.jpg',
-								]
+								],
 							},
 							{
 								title: 'Horror',
@@ -51,7 +51,7 @@ export const MoviesStore = {
 									'/src/assets/images/categories/action/2.jpg',
 									'/src/assets/images/categories/action/3.jpg',
 									'/src/assets/images/categories/action/4.jpg',
-								]
+								],
 							},
 							{
 								title: 'Action',
@@ -60,7 +60,7 @@ export const MoviesStore = {
 									'/src/assets/images/categories/action/2.jpg',
 									'/src/assets/images/categories/action/3.jpg',
 									'/src/assets/images/categories/action/4.jpg',
-								]
+								],
 							},
 							{
 								title: 'Adventure',
@@ -69,7 +69,7 @@ export const MoviesStore = {
 									'/src/assets/images/categories/action/2.jpg',
 									'/src/assets/images/categories/action/3.jpg',
 									'/src/assets/images/categories/action/4.jpg',
-								]
+								],
 							},
 							{
 								title: 'Comedy',
@@ -78,7 +78,7 @@ export const MoviesStore = {
 									'/src/assets/images/categories/action/2.jpg',
 									'/src/assets/images/categories/action/3.jpg',
 									'/src/assets/images/categories/action/4.jpg',
-								]
+								],
 							},
 							{
 								title: 'Drama',
@@ -87,7 +87,7 @@ export const MoviesStore = {
 									'/src/assets/images/categories/action/2.jpg',
 									'/src/assets/images/categories/action/3.jpg',
 									'/src/assets/images/categories/action/4.jpg',
-								]
+								],
 							},
 							{
 								title: 'Horror',
@@ -96,7 +96,7 @@ export const MoviesStore = {
 									'/src/assets/images/categories/action/2.jpg',
 									'/src/assets/images/categories/action/3.jpg',
 									'/src/assets/images/categories/action/4.jpg',
-								]
+								],
 							},
 							{
 								title: 'Action',
@@ -105,7 +105,7 @@ export const MoviesStore = {
 									'/src/assets/images/categories/action/2.jpg',
 									'/src/assets/images/categories/action/3.jpg',
 									'/src/assets/images/categories/action/4.jpg',
-								]
+								],
 							},
 							{
 								title: 'Adventure',
@@ -114,7 +114,7 @@ export const MoviesStore = {
 									'/src/assets/images/categories/action/2.jpg',
 									'/src/assets/images/categories/action/3.jpg',
 									'/src/assets/images/categories/action/4.jpg',
-								]
+								],
 							},
 							{
 								title: 'Comedy',
@@ -123,7 +123,7 @@ export const MoviesStore = {
 									'/src/assets/images/categories/action/2.jpg',
 									'/src/assets/images/categories/action/3.jpg',
 									'/src/assets/images/categories/action/4.jpg',
-								]
+								],
 							},
 							{
 								title: 'Drama',
@@ -132,7 +132,7 @@ export const MoviesStore = {
 									'/src/assets/images/categories/action/2.jpg',
 									'/src/assets/images/categories/action/3.jpg',
 									'/src/assets/images/categories/action/4.jpg',
-								]
+								],
 							},
 							{
 								title: 'Horror',
@@ -141,7 +141,7 @@ export const MoviesStore = {
 									'/src/assets/images/categories/action/2.jpg',
 									'/src/assets/images/categories/action/3.jpg',
 									'/src/assets/images/categories/action/4.jpg',
-								]
+								],
 							},
 							{
 								title: 'Action',
@@ -150,7 +150,7 @@ export const MoviesStore = {
 									'/src/assets/images/categories/action/2.jpg',
 									'/src/assets/images/categories/action/3.jpg',
 									'/src/assets/images/categories/action/4.jpg',
-								]
+								],
 							},
 							{
 								title: 'Adventure',
@@ -159,7 +159,7 @@ export const MoviesStore = {
 									'/src/assets/images/categories/action/2.jpg',
 									'/src/assets/images/categories/action/3.jpg',
 									'/src/assets/images/categories/action/4.jpg',
-								]
+								],
 							},
 							{
 								title: 'Comedy',
@@ -168,7 +168,7 @@ export const MoviesStore = {
 									'/src/assets/images/categories/action/2.jpg',
 									'/src/assets/images/categories/action/3.jpg',
 									'/src/assets/images/categories/action/4.jpg',
-								]
+								],
 							},
 							{
 								title: 'Drama',
@@ -177,7 +177,7 @@ export const MoviesStore = {
 									'/src/assets/images/categories/action/2.jpg',
 									'/src/assets/images/categories/action/3.jpg',
 									'/src/assets/images/categories/action/4.jpg',
-								]
+								],
 							},
 							{
 								title: 'Horror',
@@ -186,7 +186,7 @@ export const MoviesStore = {
 									'/src/assets/images/categories/action/2.jpg',
 									'/src/assets/images/categories/action/3.jpg',
 									'/src/assets/images/categories/action/4.jpg',
-								]
+								],
 							},
 						],
 					},
@@ -385,7 +385,7 @@ export const MoviesStore = {
 									spaceBetween: 30,
 									allowTouchMove: false,
 								},
-							}
+							},
 						},
 					},
 					{
@@ -395,125 +395,125 @@ export const MoviesStore = {
 								title: 'Morbius',
 								imgSrc: '/src/assets/images/movies/1.jpg',
 								duration: '1h 30 min',
-								views: '2K'
+								views: '2K',
 							},
 							{
 								title: 'Morbius 2',
 								imgSrc: '/src/assets/images/movies/2.jpg',
 								duration: '1h 30 min',
-								views: '2K'
+								views: '2K',
 							},
 							{
 								title: 'Morbius 3',
 								imgSrc: '/src/assets/images/movies/3.jpg',
 								duration: '1h 30 min',
-								views: '2K'
+								views: '2K',
 							},
 							{
 								title: 'Morbius 4 ',
 								imgSrc: '/src/assets/images/movies/4.jpg',
 								duration: '1h 30 min',
-								views: '2K'
+								views: '2K',
 							},
 							{
 								title: 'Morbius 5',
 								imgSrc: '/src/assets/images/movies/5.jpg',
 								duration: '1h 30 min',
-								views: '2K'
+								views: '2K',
 							},
 
 							{
 								title: 'Morbius',
 								imgSrc: '/src/assets/images/movies/1.jpg',
 								duration: '1h 30 min',
-								views: '2K'
+								views: '2K',
 							},
 							{
 								title: 'Morbius 2',
 								imgSrc: '/src/assets/images/movies/2.jpg',
 								duration: '1h 30 min',
-								views: '2K'
+								views: '2K',
 							},
 							{
 								title: 'Morbius 3',
 								imgSrc: '/src/assets/images/movies/3.jpg',
 								duration: '1h 30 min',
-								views: '2K'
+								views: '2K',
 							},
 							{
 								title: 'Morbius 4 ',
 								imgSrc: '/src/assets/images/movies/4.jpg',
 								duration: '1h 30 min',
-								views: '2K'
+								views: '2K',
 							},
 							{
 								title: 'Morbius 5',
 								imgSrc: '/src/assets/images/movies/5.jpg',
 								duration: '1h 30 min',
-								views: '2K'
+								views: '2K',
 							},
 
 							{
 								title: 'Morbius',
 								imgSrc: '/src/assets/images/movies/1.jpg',
 								duration: '1h 30 min',
-								views: '2K'
+								views: '2K',
 							},
 							{
 								title: 'Morbius 2',
 								imgSrc: '/src/assets/images/movies/2.jpg',
 								duration: '1h 30 min',
-								views: '2K'
+								views: '2K',
 							},
 							{
 								title: 'Morbius 3',
 								imgSrc: '/src/assets/images/movies/3.jpg',
 								duration: '1h 30 min',
-								views: '2K'
+								views: '2K',
 							},
 							{
 								title: 'Morbius 4 ',
 								imgSrc: '/src/assets/images/movies/4.jpg',
 								duration: '1h 30 min',
-								views: '2K'
+								views: '2K',
 							},
 							{
 								title: 'Morbius 5',
 								imgSrc: '/src/assets/images/movies/5.jpg',
 								duration: '1h 30 min',
-								views: '2K'
+								views: '2K',
 							},
 
 							{
 								title: 'Morbius',
 								imgSrc: '/src/assets/images/movies/1.jpg',
 								duration: '1h 30 min',
-								views: '2K'
+								views: '2K',
 							},
 							{
 								title: 'Morbius 2',
 								imgSrc: '/src/assets/images/movies/2.jpg',
 								duration: '1h 30 min',
-								views: '2K'
+								views: '2K',
 							},
 							{
 								title: 'Morbius 3',
 								imgSrc: '/src/assets/images/movies/3.jpg',
 								duration: '1h 30 min',
-								views: '2K'
+								views: '2K',
 							},
 							{
 								title: 'Morbius 4 ',
 								imgSrc: '/src/assets/images/movies/4.jpg',
 								duration: '1h 30 min',
-								views: '2K'
+								views: '2K',
 							},
 							{
 								title: 'Morbius 5',
 								imgSrc: '/src/assets/images/movies/5.jpg',
 								duration: '1h 30 min',
-								views: '2K'
-							}
+								views: '2K',
+							},
 						],
 					},
 					{
@@ -524,40 +524,40 @@ export const MoviesStore = {
 								imgSrc: '/src/assets/images/movies/1.jpg',
 								released: {
 									label: '14 April 2023',
-									dateTime: '2023-04-14'
-								}
+									dateTime: '2023-04-14',
+								},
 							},
 							{
 								title: 'Morbius',
 								imgSrc: '/src/assets/images/movies/2.jpg',
 								released: {
 									label: '14 April 2023',
-									dateTime: '2023-04-14'
-								}
+									dateTime: '2023-04-14',
+								},
 							},
 							{
 								title: 'Morbius',
 								imgSrc: '/src/assets/images/movies/3.jpg',
 								released: {
 									label: '14 April 2023',
-									dateTime: '2023-04-14'
-								}
+									dateTime: '2023-04-14',
+								},
 							},
 							{
 								title: 'Morbius',
 								imgSrc: '/src/assets/images/movies/4.jpg',
 								released: {
 									label: '14 April 2023',
-									dateTime: '2023-04-14'
-								}
+									dateTime: '2023-04-14',
+								},
 							},
 							{
 								title: 'Morbius',
 								imgSrc: '/src/assets/images/movies/5.jpg',
 								released: {
 									label: '14 April 2023',
-									dateTime: '2023-04-14'
-								}
+									dateTime: '2023-04-14',
+								},
 							},
 
 							{
@@ -565,40 +565,40 @@ export const MoviesStore = {
 								imgSrc: '/src/assets/images/movies/1.jpg',
 								released: {
 									label: '14 April 2023',
-									dateTime: '2023-04-14'
-								}
+									dateTime: '2023-04-14',
+								},
 							},
 							{
 								title: 'Morbius',
 								imgSrc: '/src/assets/images/movies/2.jpg',
 								released: {
 									label: '14 April 2023',
-									dateTime: '2023-04-14'
-								}
+									dateTime: '2023-04-14',
+								},
 							},
 							{
 								title: 'Morbius',
 								imgSrc: '/src/assets/images/movies/3.jpg',
 								released: {
 									label: '14 April 2023',
-									dateTime: '2023-04-14'
-								}
+									dateTime: '2023-04-14',
+								},
 							},
 							{
 								title: 'Morbius',
 								imgSrc: '/src/assets/images/movies/4.jpg',
 								released: {
 									label: '14 April 2023',
-									dateTime: '2023-04-14'
-								}
+									dateTime: '2023-04-14',
+								},
 							},
 							{
 								title: 'Morbius',
 								imgSrc: '/src/assets/images/movies/5.jpg',
 								released: {
 									label: '14 April 2023',
-									dateTime: '2023-04-14'
-								}
+									dateTime: '2023-04-14',
+								},
 							},
 
 							{
@@ -606,40 +606,40 @@ export const MoviesStore = {
 								imgSrc: '/src/assets/images/movies/1.jpg',
 								released: {
 									label: '14 April 2023',
-									dateTime: '2023-04-14'
-								}
+									dateTime: '2023-04-14',
+								},
 							},
 							{
 								title: 'Morbius',
 								imgSrc: '/src/assets/images/movies/2.jpg',
 								released: {
 									label: '14 April 2023',
-									dateTime: '2023-04-14'
-								}
+									dateTime: '2023-04-14',
+								},
 							},
 							{
 								title: 'Morbius',
 								imgSrc: '/src/assets/images/movies/3.jpg',
 								released: {
 									label: '14 April 2023',
-									dateTime: '2023-04-14'
-								}
+									dateTime: '2023-04-14',
+								},
 							},
 							{
 								title: 'Morbius',
 								imgSrc: '/src/assets/images/movies/4.jpg',
 								released: {
 									label: '14 April 2023',
-									dateTime: '2023-04-14'
-								}
+									dateTime: '2023-04-14',
+								},
 							},
 							{
 								title: 'Morbius',
 								imgSrc: '/src/assets/images/movies/5.jpg',
 								released: {
 									label: '14 April 2023',
-									dateTime: '2023-04-14'
-								}
+									dateTime: '2023-04-14',
+								},
 							},
 
 							{
@@ -647,42 +647,42 @@ export const MoviesStore = {
 								imgSrc: '/src/assets/images/movies/1.jpg',
 								released: {
 									label: '14 April 2023',
-									dateTime: '2023-04-14'
-								}
+									dateTime: '2023-04-14',
+								},
 							},
 							{
 								title: 'Morbius',
 								imgSrc: '/src/assets/images/movies/2.jpg',
 								released: {
 									label: '14 April 2023',
-									dateTime: '2023-04-14'
-								}
+									dateTime: '2023-04-14',
+								},
 							},
 							{
 								title: 'Morbius',
 								imgSrc: '/src/assets/images/movies/3.jpg',
 								released: {
 									label: '14 April 2023',
-									dateTime: '2023-04-14'
-								}
+									dateTime: '2023-04-14',
+								},
 							},
 							{
 								title: 'Morbius',
 								imgSrc: '/src/assets/images/movies/4.jpg',
 								released: {
 									label: '14 April 2023',
-									dateTime: '2023-04-14'
-								}
+									dateTime: '2023-04-14',
+								},
 							},
 							{
 								title: 'Morbius',
 								imgSrc: '/src/assets/images/movies/5.jpg',
 								released: {
 									label: '14 April 2023',
-									dateTime: '2023-04-14'
-								}
-							}
-						]
+									dateTime: '2023-04-14',
+								},
+							},
+						],
 					},
 					{
 						title: 'Must Watch',
@@ -693,8 +693,8 @@ export const MoviesStore = {
 								duration: '1h 57min',
 								rating: {
 									value: 4.5,
-									label: '20K'
-								}
+									label: '20K',
+								},
 							},
 							{
 								title: 'Morbius',
@@ -702,8 +702,8 @@ export const MoviesStore = {
 								duration: '1h 57min',
 								rating: {
 									value: 4.5,
-									label: '20K'
-								}
+									label: '20K',
+								},
 							},
 							{
 								title: 'Morbius',
@@ -711,8 +711,8 @@ export const MoviesStore = {
 								duration: '1h 57min',
 								rating: {
 									value: 4.5,
-									label: '20K'
-								}
+									label: '20K',
+								},
 							},
 							{
 								title: 'Morbius',
@@ -720,45 +720,8 @@ export const MoviesStore = {
 								duration: '1h 57min',
 								rating: {
 									value: 4.5,
-									label: '20K'
-								}
-							},
-
-							{
-								title: 'Morbius',
-								imgSrc: '/src/assets/images/movies/1.jpg',
-								duration: '1h 57min',
-								rating: {
-									value: 4.5,
-									label: '20K'
-								}
-							},
-							{
-								title: 'Morbius',
-								imgSrc: '/src/assets/images/movies/1.jpg',
-								duration: '1h 57min',
-								rating: {
-									value: 4.5,
-									label: '20K'
-								}
-							},
-							{
-								title: 'Morbius',
-								imgSrc: '/src/assets/images/movies/1.jpg',
-								duration: '1h 57min',
-								rating: {
-									value: 4.5,
-									label: '20K'
-								}
-							},
-							{
-								title: 'Morbius',
-								imgSrc: '/src/assets/images/movies/1.jpg',
-								duration: '1h 57min',
-								rating: {
-									value: 4.5,
-									label: '20K'
-								}
+									label: '20K',
+								},
 							},
 
 							{
@@ -767,8 +730,8 @@ export const MoviesStore = {
 								duration: '1h 57min',
 								rating: {
 									value: 4.5,
-									label: '20K'
-								}
+									label: '20K',
+								},
 							},
 							{
 								title: 'Morbius',
@@ -776,8 +739,8 @@ export const MoviesStore = {
 								duration: '1h 57min',
 								rating: {
 									value: 4.5,
-									label: '20K'
-								}
+									label: '20K',
+								},
 							},
 							{
 								title: 'Morbius',
@@ -785,8 +748,8 @@ export const MoviesStore = {
 								duration: '1h 57min',
 								rating: {
 									value: 4.5,
-									label: '20K'
-								}
+									label: '20K',
+								},
 							},
 							{
 								title: 'Morbius',
@@ -794,8 +757,8 @@ export const MoviesStore = {
 								duration: '1h 57min',
 								rating: {
 									value: 4.5,
-									label: '20K'
-								}
+									label: '20K',
+								},
 							},
 
 							{
@@ -804,8 +767,8 @@ export const MoviesStore = {
 								duration: '1h 57min',
 								rating: {
 									value: 4.5,
-									label: '20K'
-								}
+									label: '20K',
+								},
 							},
 							{
 								title: 'Morbius',
@@ -813,8 +776,8 @@ export const MoviesStore = {
 								duration: '1h 57min',
 								rating: {
 									value: 4.5,
-									label: '20K'
-								}
+									label: '20K',
+								},
 							},
 							{
 								title: 'Morbius',
@@ -822,8 +785,8 @@ export const MoviesStore = {
 								duration: '1h 57min',
 								rating: {
 									value: 4.5,
-									label: '20K'
-								}
+									label: '20K',
+								},
 							},
 							{
 								title: 'Morbius',
@@ -831,8 +794,45 @@ export const MoviesStore = {
 								duration: '1h 57min',
 								rating: {
 									value: 4.5,
-									label: '20K'
-								}
+									label: '20K',
+								},
+							},
+
+							{
+								title: 'Morbius',
+								imgSrc: '/src/assets/images/movies/1.jpg',
+								duration: '1h 57min',
+								rating: {
+									value: 4.5,
+									label: '20K',
+								},
+							},
+							{
+								title: 'Morbius',
+								imgSrc: '/src/assets/images/movies/1.jpg',
+								duration: '1h 57min',
+								rating: {
+									value: 4.5,
+									label: '20K',
+								},
+							},
+							{
+								title: 'Morbius',
+								imgSrc: '/src/assets/images/movies/1.jpg',
+								duration: '1h 57min',
+								rating: {
+									value: 4.5,
+									label: '20K',
+								},
+							},
+							{
+								title: 'Morbius',
+								imgSrc: '/src/assets/images/movies/1.jpg',
+								duration: '1h 57min',
+								rating: {
+									value: 4.5,
+									label: '20K',
+								},
 							},
 						],
 						sliderParams: {
@@ -863,35 +863,39 @@ export const MoviesStore = {
 									spaceBetween: 30,
 									allowTouchMove: false,
 								},
-							}
+							},
 						},
-					}
+					},
 				],
-			}
-		]
+			},
+		],
 	},
 	MoviesBanner: {
 		movieItems: [
 			{
 				title: 'Avengers : Endgame',
-				description: 'With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos\'s actions and undo the chaos to the universe, no matter what consequences may be in store, and no matter who they face... Avenge the fallen.',
+				description:
+					"With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos's actions and undo the chaos to the universe, no matter what consequences may be in store, and no matter who they face... Avenge the fallen.",
 				imgSrc: '/src/assets/images/movie-banner/1.jpg',
 			},
 			{
 				title: 'Avengers : Endgame 2',
-				description: 'With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos\'s actions and undo the chaos to the universe, no matter what consequences may be in store, and no matter who they face... Avenge the fallen.',
+				description:
+					"With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos's actions and undo the chaos to the universe, no matter what consequences may be in store, and no matter who they face... Avenge the fallen.",
 				imgSrc: '/src/assets/images/movie-banner/1.jpg',
 			},
 			{
 				title: 'Avengers : Endgame 3',
-				description: 'With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos\'s actions and undo the chaos to the universe, no matter what consequences may be in store, and no matter who they face... Avenge the fallen.',
+				description:
+					"With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos's actions and undo the chaos to the universe, no matter what consequences may be in store, and no matter who they face... Avenge the fallen.",
 				imgSrc: '/src/assets/images/movie-banner/1.jpg',
 			},
 			{
 				title: 'Avengers : Endgame 4',
-				description: 'With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos\'s actions and undo the chaos to the universe, no matter what consequences may be in store, and no matter who they face... Avenge the fallen.',
+				description:
+					"With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos's actions and undo the chaos to the universe, no matter what consequences may be in store, and no matter who they face... Avenge the fallen.",
 				imgSrc: '/src/assets/images/movie-banner/1.jpg',
 			},
-		]
-	}
+		],
+	},
 }

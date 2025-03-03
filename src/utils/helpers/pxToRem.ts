@@ -4,4 +4,4 @@ const pxToRem = (pixels: number) => {
 	return pixels / htmlElementFontSize
 }
 
-export default pxToRem;
+export default pxToRem

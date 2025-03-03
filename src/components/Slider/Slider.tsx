@@ -1,8 +1,8 @@
-import "swiper/css"
-import "./Slider.scss"
-import { type SliderProps } from "./SliderProps";
-import { SliderNavigation } from "@/components";
-import cn from "classnames";
+import 'swiper/css'
+import './Slider.scss'
+import { type SliderProps } from './SliderProps'
+import { SliderNavigation } from '@/components'
+import cn from 'classnames'
 
 const defaultSliderParams = {
 	slidesPerView: 5,
@@ -16,22 +16,22 @@ const defaultSliderParams = {
 		481: {
 			slidesPerView: 3,
 			slidesPerGroup: 3,
-			spaceBetween: 20
+			spaceBetween: 20,
 		},
 		768: {
 			slidesPerView: 4,
 			slidesPerGroup: 4,
-			spaceBetween: 20
+			spaceBetween: 20,
 		},
 		1024: {
 			spaceBetween: 20,
-			allowTouchMove: false
+			allowTouchMove: false,
 		},
 		1441: {
 			spaceBetween: 30,
-			allowTouchMove: false
-		}
-	}
+			allowTouchMove: false,
+		},
+	},
 }
 
 export const Slider = (props: SliderProps) => {
@@ -49,19 +49,20 @@ export const Slider = (props: SliderProps) => {
 	return (
 		<div
 			className={cn('slider', {
-				'slider__beyond-the-viewport-on-mobile-s': isBeyondTheViewportOnMobileS
+				'slider__beyond-the-viewport-on-mobile-s': isBeyondTheViewportOnMobileS,
 			})}
 			data-js-slider={JSON.stringify({
 				sliderParams,
-				navigationTargetElementId
+				navigationTargetElementId,
 			})}
 		>
-			<div className="slider__swiper swiper" data-js-slider-swiper=''>
+			<div className="slider__swiper swiper" data-js-slider-swiper="">
 				<ul className="slider__list swiper-wrapper">
-					{children && children.map((slide, idx) => (
-						<li className='slider__item swiper-slide' key={idx}>
-							{slide}
-						</li>
+					{children &&
+						children.map((slide, idx) => (
+							<li className="slider__item swiper-slide" key={idx}>
+								{slide}
+							</li>
 						))}
 				</ul>
 			</div>
@@ -74,11 +75,7 @@ export const Slider = (props: SliderProps) => {
 				/>
 			)}
 
-			{hasScrollbarOnMobile && (
-				<div
-					data-js-slider-scrollbar=''
-					className='slider__scrollbar visible-mobile'></div>
-			)}
+			{hasScrollbarOnMobile && <div data-js-slider-scrollbar="" className="slider__scrollbar visible-mobile"></div>}
 		</div>
-	);
+	)
 }

@@ -32,8 +32,8 @@ interface MovieItem {
 	imgSrc: string
 	duration?: string
 	views?: string
-	released?: { label: string, dateTime: string }
-	rating?: { value: number, label: string }
+	released?: { label: string; dateTime: string }
+	rating?: { value: number; label: string }
 }
 
 // в табах
@@ -46,7 +46,7 @@ interface PlansItems {
 interface PlansItem {
 	title: string
 	description: string
-	price: { value: string, label: string }
+	price: { value: string; label: string }
 }
 
 interface HeadCell {

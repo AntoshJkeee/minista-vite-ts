@@ -1,39 +1,36 @@
-import getAttrNameFromSelector from "@/utils/helpers/getAttrNameFromSelector";
-import IMask, {InputMaskElement} from "imask";
+import getAttrNameFromSelector from '@/utils/helpers/getAttrNameFromSelector'
+import IMask, { InputMaskElement } from 'imask'
 
 const rootSelector = '[data-js-input-mask]'
 
 class InputMask {
-  rootElement
-  selectors = {
-    root: rootSelector,
-  }
+	rootElement
+	selectors = {
+		root: rootSelector,
+	}
 
-  constructor(rootElement: Element) {
-    this.rootElement = rootElement
-    this.init()
-  }
+	constructor(rootElement: Element) {
+		this.rootElement = rootElement
+		this.init()
+	}
 
-  init() {
-    const mask = this.rootElement.getAttribute(
-        getAttrNameFromSelector(this.selectors.root)
-    )
+	init() {
+		const mask = this.rootElement.getAttribute(getAttrNameFromSelector(this.selectors.root))
 
-    if(mask) {
-
-      IMask(this.rootElement as InputMaskElement, { mask })
-    }
-  }
+		if (mask) {
+			IMask(this.rootElement as InputMaskElement, { mask })
+		}
+	}
 }
 
 export class InputMaskCollection {
-  constructor () {
-    this.init()
-  }
+	constructor() {
+		this.init()
+	}
 
-  init() {
-    document.querySelectorAll(rootSelector).forEach((element) => {
-      new InputMask(element)
-    })
-  }
+	init() {
+		document.querySelectorAll(rootSelector).forEach((element) => {
+			new InputMask(element)
+		})
+	}
 }

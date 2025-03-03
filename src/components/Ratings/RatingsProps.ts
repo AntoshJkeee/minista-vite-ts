@@ -1,3 +1,3 @@
 export interface RatingsProps {
-	items: { title: string, ratingValue: number }[]
+	items: { title: string; ratingValue: number }[]
 }

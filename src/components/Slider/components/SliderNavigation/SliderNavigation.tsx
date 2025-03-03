@@ -1,7 +1,7 @@
-import "./SliderNavigation.scss"
-import cn from "classnames";
-import { type SliderNavigationProps } from "./SliderNavigationProps";
-import { Button } from "@/components";
+import './SliderNavigation.scss'
+import cn from 'classnames'
+import { type SliderNavigationProps } from './SliderNavigationProps'
+import { Button } from '@/components'
 
 export const SliderNavigation = (props: SliderNavigationProps) => {
 	const {
@@ -11,7 +11,7 @@ export const SliderNavigation = (props: SliderNavigationProps) => {
 		mode = '',
 		position = '',
 		isHiddenMobile,
-		buttonMode = 'black-10'
+		buttonMode = 'black-10',
 	} = props
 
 	return (
@@ -19,37 +19,32 @@ export const SliderNavigation = (props: SliderNavigationProps) => {
 			className={cn(className, 'slider-navigation', {
 				[`slider-navigation__${mode}`]: mode,
 				[`slider-navigation__${position}`]: position,
-				'hidden-mobile': isHiddenMobile
+				'hidden-mobile': isHiddenMobile,
 			})}
 			id={id}
-			data-js-slider-navigation=''
+			data-js-slider-navigation=""
 		>
 			<Button
-				className='slider-navigation__arrow-button slider-navigation__arrow-button--previous'
-				mode='black-10'
-				iconName='arrow-left'
-				label='Previous slide'
+				className="slider-navigation__arrow-button slider-navigation__arrow-button--previous"
+				mode="black-10"
+				iconName="arrow-left"
+				label="Previous slide"
 				isLabelHidden
 				extraAttrs={{
-					'data-js-slider-previous-button': ''
+					'data-js-slider-previous-button': '',
 				}}
 			/>
-			{hasPagination && (
-				<div
-					className='slider-navigation__pagination'
-					data-js-slider-pagination=''
-				/>
-			)}
+			{hasPagination && <div className="slider-navigation__pagination" data-js-slider-pagination="" />}
 			<Button
-				className='slider-navigation__arrow-button slider-navigation__arrow-button--next'
+				className="slider-navigation__arrow-button slider-navigation__arrow-button--next"
 				mode={buttonMode}
-				iconName='arrow-right'
-				label='Next slide'
+				iconName="arrow-right"
+				label="Next slide"
 				isLabelHidden
 				extraAttrs={{
-					'data-js-slider-next-button': ''
+					'data-js-slider-next-button': '',
 				}}
 			/>
 		</div>
-	);
+	)
 }

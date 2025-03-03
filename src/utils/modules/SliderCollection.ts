@@ -1,6 +1,6 @@
-import getParams from "@/utils/helpers/getParams"
-import Swiper from "swiper"
-import { Navigation, Pagination, Scrollbar } from "swiper/modules"
+import getParams from '@/utils/helpers/getParams'
+import Swiper from 'swiper'
+import { Navigation, Pagination, Scrollbar } from 'swiper/modules'
 
 const rootSelector = '[data-js-slider]'
 
@@ -21,7 +21,7 @@ class Slider {
 		pagination: '[data-js-slider-pagination]',
 		prevButton: '[data-js-slider-previous-button]',
 		nextButton: '[data-js-slider-next-button]',
-		scrollbar: '[data-js-slider-scrollbar]'
+		scrollbar: '[data-js-slider-scrollbar]',
 	}
 
 	constructor(rootElement: Element) {
@@ -44,17 +44,17 @@ class Slider {
 			modules: [Navigation, Pagination, Scrollbar],
 			navigation: {
 				prevEl: this.prevButtonElement,
-				nextEl: this.nextButtonElement
+				nextEl: this.nextButtonElement,
 			},
 			pagination: {
 				el: this.paginationElement,
 				bulletClass: 'slider-navigation__pagination-bullet',
-				bulletActiveClass: 'is-active'
+				bulletActiveClass: 'is-active',
 			},
 			scrollbar: {
 				el: this.scrollbarElement,
-				dragClass: 'slider__scrollbar-drag'
-			}
+				dragClass: 'slider__scrollbar-drag',
+			},
 		})
 	}
 }
@@ -68,5 +68,5 @@ export class SliderCollection {
 		document.querySelectorAll(rootSelector).forEach((element) => {
 			new Slider(element)
 		})
-	};
+	}
 }

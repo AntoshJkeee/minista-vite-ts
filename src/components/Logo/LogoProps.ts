@@ -1,4 +1,4 @@
 export interface LogoProps {
-	className?: string;
+	className?: string
 	loading?: 'eager' | 'lazy'
 }

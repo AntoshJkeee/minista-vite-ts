@@ -1,17 +1,16 @@
 import './Hero.scss'
-import { Button } from "@/components";
+import { Button } from '@/components'
+import { HeroProps } from './HeroProps'
 
-export const Hero = (props) => {
-	const {
-		buttonEl,
-	} = props;
+export const Hero = (props: HeroProps) => {
+	const { buttonEl } = props
 
 	return (
-		<section className='hero' aria-labelledby='hero-title'>
+		<section className="hero" aria-labelledby="hero-title">
 			<div className="hero__pano">
 				<div className="hero__pano-inner container">
-					<button className="hero__play-button" type='button' aria-label='Play Video' title='Play Video'>
-						<img  alt='' src='/images/play.svg' width={470} height={470} className='hero__play-button-image'/>
+					<button className="hero__play-button" type="button" aria-label="Play Video" title="Play Video">
+						<img alt="" src="/images/play.svg" width={470} height={470} className="hero__play-button-image" />
 					</button>
 				</div>
 			</div>
@@ -22,12 +21,15 @@ export const Hero = (props) => {
 					</h1>
 					<div className="hero__description">
 						<p>
-							StreamVibe is the best streaming experience for watching your favorite movies and shows on demand, anytime, anywhere. With StreamVibe, you can enjoy a wide variety of content, including the latest blockbusters, classic movies, popular TV shows, and more. You can also create your own watchlists, so you can easily find the content you want to watch.
+							StreamVibe is the best streaming experience for watching your favorite movies and shows on demand,
+							anytime, anywhere. With StreamVibe, you can enjoy a wide variety of content, including the latest
+							blockbusters, classic movies, popular TV shows, and more. You can also create your own watchlists, so you
+							can easily find the content you want to watch.
 						</p>
 					</div>
-					<Button {...buttonEl}/>
+					<Button {...buttonEl} />
 				</div>
 			</div>
 		</section>
-	);
-};
+	)
+}

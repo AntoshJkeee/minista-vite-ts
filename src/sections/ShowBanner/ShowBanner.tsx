@@ -1,4 +1,4 @@
-import { MovieBannerCard } from "@/components";
+import { MovieBannerCard } from '@/components'
 
 export const ShowBanner = () => {
 	return (
@@ -12,5 +12,5 @@ export const ShowBanner = () => {
 				description="When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl."
 			/>
 		</section>
-	);
+	)
 }

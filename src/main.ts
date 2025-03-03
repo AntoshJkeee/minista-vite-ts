@@ -1,7 +1,6 @@
-import CheckJson from "./utils/modules/JsonApi";
+import CheckJson from './utils/modules/JsonApi'
 
 document.addEventListener('DOMContentLoaded', () => {
-
 	CheckJson()
 
 	if (document.querySelector('[data-js-overlay-menu]')) {
@@ -39,4 +38,4 @@ document.addEventListener('DOMContentLoaded', () => {
 			new SelectCollection()
 		})
 	}
-});
+})

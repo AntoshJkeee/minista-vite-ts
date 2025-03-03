@@ -4,7 +4,7 @@ export interface AccordionProps {
 	name: string
 	isOpen: boolean
 	isArrowButton?: boolean
-	children: JSX.Element,
-	titleLevelClassName?: 'h4' | 'h5',
-	subtitle?: string,
+	children: JSX.Element
+	titleLevelClassName?: 'h4' | 'h5'
+	subtitle?: string
 }

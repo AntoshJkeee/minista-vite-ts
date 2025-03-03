@@ -5,58 +5,62 @@ const planGroups = [
 		items: [
 			{
 				title: 'Basic Plan',
-				description: 'Enjoy an extensive library of movies and shows, featuring a range of content, including recently released titles.',
+				description:
+					'Enjoy an extensive library of movies and shows, featuring a range of content, including recently released titles.',
 				price: {
 					value: '$9.99',
-					label: '/month'
-				}
+					label: '/month',
+				},
 			},
 			{
 				title: 'Standard Plan',
-				description: 'Access to a wider selection of movies and shows, including most new releases and exclusive content',
+				description:
+					'Access to a wider selection of movies and shows, including most new releases and exclusive content',
 				price: {
 					value: '$12.99',
-					label: '/month'
-				}
+					label: '/month',
+				},
 			},
 			{
 				title: 'Premium Plan',
 				description: 'Access to a widest selection of movies and shows, including all new releases and Offline Viewing',
 				price: {
 					value: '$14.99',
-					label: '/month'
-				}
-			}
-		]
+					label: '/month',
+				},
+			},
+		],
 	},
 	{
 		title: 'Yearly',
 		items: [
 			{
 				title: 'Mega Plan',
-				description: 'Enjoy an extensive library of movies and shows, featuring a range of content, including recently released titles.',
+				description:
+					'Enjoy an extensive library of movies and shows, featuring a range of content, including recently released titles.',
 				price: {
 					value: '$49.99',
-					label: '/year'
-				}
+					label: '/year',
+				},
 			},
 			{
 				title: 'Super Plan',
-				description: 'Access to a wider selection of movies and shows, including most new releases and exclusive content',
+				description:
+					'Access to a wider selection of movies and shows, including most new releases and exclusive content',
 				price: {
 					value: '$72.99',
-					label: '/year'
-				}
+					label: '/year',
+				},
 			},
 			{
 				title: 'Extra Mega Plan',
 				description: 'Access to a widest selection of movies and shows, including all new releases and Offline Viewing',
 				price: {
 					value: '$94.99',
-					label: '/year'
-				}
-			}
-		]
+					label: '/year',
+				},
+			},
+		],
 	},
 ]
 

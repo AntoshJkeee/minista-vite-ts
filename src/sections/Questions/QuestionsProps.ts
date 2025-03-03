@@ -1,3 +1,3 @@
 export interface QuestionsProps {
-	questionItems: string[];
+	questionItems: string[]
 }

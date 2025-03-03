@@ -1,3 +1,3 @@
 export interface DevicesProps {
-	deviceItems: DeviceItem[];
+	deviceItems: DeviceItem[]
 }

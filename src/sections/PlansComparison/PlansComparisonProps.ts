@@ -1,4 +1,4 @@
 export interface PlansComparisonProps {
-	headCells: HeadCell[],
+	headCells: HeadCell[]
 	rows: Row[]
 }

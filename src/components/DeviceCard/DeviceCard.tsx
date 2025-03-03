@@ -1,20 +1,14 @@
-import "./DeviceCard.scss"
-import { DeviceCardProps } from "./DeviceCardProps";
+import './DeviceCard.scss'
+import { DeviceCardProps } from './DeviceCardProps'
 
 export const DeviceCard = (props: DeviceCardProps) => {
-	const {
-		title,
-		description,
-		imgSrc
-	} = props
+	const { title, description, imgSrc } = props
 
 	return (
-		<div className='device-card'>
-			<header
-					className='device-card__header'
-			>
+		<div className="device-card">
+			<header className="device-card__header">
 				<div className="device-card__image-wrapper">
-					<img src={imgSrc} alt="" className="device-card__image" width={40} height={40} loading='lazy'/>
+					<img src={imgSrc} alt="" className="device-card__image" width={40} height={40} loading="lazy" />
 				</div>
 				<h3 className="device-card__title h4">{title}</h3>
 			</header>
@@ -22,5 +16,5 @@ export const DeviceCard = (props: DeviceCardProps) => {
 				<p>{description}</p>
 			</div>
 		</div>
-	);
+	)
 }

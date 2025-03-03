@@ -1,7 +1,7 @@
 export interface SliderProps {
-	children: JSX.Element[];
+	children: JSX.Element[]
 	navigationTargetElementId?: null | string
-	sliderParams?: SliderParams;
+	sliderParams?: SliderParams
 	isBeyondTheViewportOnMobileS?: boolean
 	hasScrollbarOnMobile?: boolean
 	navigationMode?: '' | 'tile' | 'rounded'

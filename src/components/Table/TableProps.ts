@@ -1,5 +1,5 @@
 export interface TableProps {
-	className?: string;
-	headCells: HeadCell[],
-	rows: Row[],
+	className?: string
+	headCells: HeadCell[]
+	rows: Row[]
 }

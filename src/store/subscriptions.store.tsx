@@ -1,4 +1,4 @@
-import { Badge } from "@/components";
+import { Badge } from '@/components'
 
 export const SubscriptionsStore = {
 	PlansComparison: {
@@ -13,7 +13,11 @@ export const SubscriptionsStore = {
 				tabsTitle: 'Basic',
 			},
 			{
-				children: <>Standard <Badge mode="accent">Popular</Badge></>,
+				children: (
+					<>
+						Standard <Badge mode="accent">Popular</Badge>
+					</>
+				),
 				width: '25%',
 				tabsTitle: 'Standart',
 			},
@@ -25,12 +29,7 @@ export const SubscriptionsStore = {
 		],
 		rows: [
 			{
-				cells: [
-					'Price',
-					'$9.99/Month',
-					'$12.99/Month',
-					'$14.99/Month',
-				],
+				cells: ['Price', '$9.99/Month', '$12.99/Month', '$14.99/Month'],
 			},
 			{
 				cells: [
@@ -51,61 +50,26 @@ export const SubscriptionsStore = {
 				isWide: true,
 			},
 			{
-				cells: [
-					'Free Trail',
-					'7 Days',
-					'7 Days',
-					'7 Days,'
-				],
+				cells: ['Free Trail', '7 Days', '7 Days', '7 Days,'],
 			},
 			{
-				cells: [
-					'Cancel Anytime',
-					'Yes',
-					'Yes',
-					'Yes',
-				],
+				cells: ['Cancel Anytime', 'Yes', 'Yes', 'Yes'],
 			},
 			{
-				cells: [
-					'HDR',
-					'No',
-					'Yes',
-					'Yes'
-				],
+				cells: ['HDR', 'No', 'Yes', 'Yes'],
 			},
 			{
-				cells: [
-					'Dolby Atmos',
-					'No',
-					'Yes',
-					'Yes'
-				],
+				cells: ['Dolby Atmos', 'No', 'Yes', 'Yes'],
 			},
 			{
-				cells: [
-					'Ad - Free',
-					'No',
-					'Yes',
-					'Yes'
-				],
+				cells: ['Ad - Free', 'No', 'Yes', 'Yes'],
 			},
 			{
-				cells: [
-					'Offline Viewing',
-					'No',
-					'Yes, for select titles.',
-					'Yes, for all titles.'
-				],
+				cells: ['Offline Viewing', 'No', 'Yes, for select titles.', 'Yes, for all titles.'],
 			},
 			{
-				cells: [
-					'Family Sharing',
-					'No',
-					'Yes, up to 5 family members.',
-					'Yes, up to 6 family members.'
-				],
+				cells: ['Family Sharing', 'No', 'Yes, up to 5 family members.', 'Yes, up to 6 family members.'],
 			},
-		]
-	}
+		],
+	},
 }

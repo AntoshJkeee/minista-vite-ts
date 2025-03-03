@@ -1,7 +1,7 @@
-import "./Button.scss"
-import { type ButtonProps } from "./ButtonProps";
-import cn from "classnames";
-import { Icon } from "@/components";
+import './Button.scss'
+import { type ButtonProps } from './ButtonProps'
+import cn from 'classnames'
+import { Icon } from '@/components'
 
 export const Button = (props: ButtonProps) => {
 	const {
@@ -15,7 +15,7 @@ export const Button = (props: ButtonProps) => {
 		iconName,
 		iconPosition = 'before',
 		hasFillIcon,
-		extraAttrs
+		extraAttrs,
 	} = props
 
 	const isLink = href !== undefined
@@ -24,12 +24,12 @@ export const Button = (props: ButtonProps) => {
 	const buttonProps = { type }
 	const specificProps = isLink ? linkProps : buttonProps
 	const title = isLabelHidden ? label : undefined
-	const iconComponent = iconName && <Icon className='button__icon' name={iconName} hasFill={hasFillIcon}/>
+	const iconComponent = iconName && <Icon className="button__icon" name={iconName} hasFill={hasFillIcon} />
 
 	return (
 		<Component
 			className={cn(className, 'button', {
-				[`button__${mode}`] : mode
+				[`button__${mode}`]: mode,
 			})}
 			{...specificProps}
 			{...extraAttrs}
@@ -37,9 +37,7 @@ export const Button = (props: ButtonProps) => {
 			aria-label={title}
 		>
 			{iconPosition === 'before' && iconComponent}
-			{!isLabelHidden && (
-				<span className="button__label">{label}</span>
-			)}
+			{!isLabelHidden && <span className="button__label">{label}</span>}
 			{iconPosition === 'after' && iconComponent}
 		</Component>
 	)

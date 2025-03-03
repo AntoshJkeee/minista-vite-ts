@@ -1,4 +1,4 @@
 export interface BurgerButtonProps {
-	className?: string;
+	className?: string
 	extraAttrs?: { [key: string]: string }
 }

@@ -2,8 +2,8 @@ export interface SliderNavigationProps {
 	className?: string
 	id?: string
 	hasPagination?: boolean
-	mode?: '' | 'tile' | 'rounded',
+	mode?: '' | 'tile' | 'rounded'
 	position?: '' | 'abs-bottom'
-	isHiddenMobile?: boolean,
+	isHiddenMobile?: boolean
 	buttonMode?: 'black-10' | 'black-08'
 }

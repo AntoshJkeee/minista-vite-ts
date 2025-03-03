@@ -1,4 +1,4 @@
 export interface SocialsProps {
 	className?: string
-	links: { label: string, iconName: string }[]
+	links: { label: string; iconName: string }[]
 }

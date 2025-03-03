@@ -1,7 +1,7 @@
 // import { type TabsProps } from "@/components/Tabs/TabsProps";
 
 export interface TabsNavigationProps {
-	className?: string,
+	className?: string
 	id?: string
 	title: string
 	items: PlansItems[]
