@@ -6,8 +6,6 @@ import { Banner } from "@/sections";
 export default (props: PageProps) => {
 	const { children, title, url, isHeaderFixed, withCss, listPages} = props
 
-	let a = 4
-
 	return (
 		<>
 			<Head htmlAttributes={{
