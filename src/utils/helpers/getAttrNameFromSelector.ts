@@ -1,4 +1,4 @@
-const getAttrNameFromSelector = (attrSelector: string) => {
+const getAttrNameFromSelector = (attrSelector) => {
 	return attrSelector.substring(1, attrSelector.length - 1)
 }
 
