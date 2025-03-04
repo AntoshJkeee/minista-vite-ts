@@ -2,7 +2,7 @@ export interface BadgeProps {
 	className?: string
 	mode?: '' | 'accent'
 	isBig?: boolean
-	children: JSX.Element
+	children: React.ReactNode
 	iconName?: string
 	hasFillIcon?: boolean
 	iconAriaLabel?: string

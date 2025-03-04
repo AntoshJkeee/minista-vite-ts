@@ -17,7 +17,7 @@ export const Plans = (props: PlansProps) => {
 				navigationTargetElementId="plans-tabs-navigation"
 				items={plansItems.map((planItem) => ({
 					title: planItem.title,
-					isActive: planItem.isActive,
+					isActive: planItem.isActive || false,
 					children: (
 						<Grid columns={3}>
 							{planItem.items.map((item, idx) => (

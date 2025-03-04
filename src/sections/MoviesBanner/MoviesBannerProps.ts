@@ -1,5 +1,9 @@
 import { MovieBannerCardProps } from '@/components/MovieBannerCard/MovieBannerCardProps'
 
 export interface MoviesBannerProps {
-	movieItems: MovieBannerCardProps[]
+	movieItems: {
+		title: string
+		description: string
+		imgSrc: string
+	}[]
 }

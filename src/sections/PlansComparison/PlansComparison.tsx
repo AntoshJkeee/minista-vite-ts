@@ -8,7 +8,7 @@ export const PlansComparison = (props: PlansComparisonProps) => {
 	const tabsItems = headCells
 		.filter((headCell) => headCell.tabsTitle)
 		.map((headCell, headCellIndex) => ({
-			title: headCell.tabsTitle,
+			title: headCell.tabsTitle ? headCell.tabsTitle : '',
 			isActive: headCellIndex === 0,
 			children: (
 				<Specifications

@@ -4,5 +4,5 @@ export interface TabsNavigationProps {
 	className?: string
 	id?: string
 	title: string
-	items: PlansItems[]
+	items: any[]
 }

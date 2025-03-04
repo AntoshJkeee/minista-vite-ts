@@ -16,7 +16,7 @@ export const MovieBannerCard = (props: MovieBannerCardProps) => {
 				})}
 			>
 				<div className="movie-banner-card__body">
-					<TitleTag id={titleId}>{title}</TitleTag>
+					<TitleTag id={titleId ? titleId: 'title-id'}>{title}</TitleTag>
 					<div className="movie-banner-card__description hidden-mobile">
 						<p>{description}</p>
 					</div>

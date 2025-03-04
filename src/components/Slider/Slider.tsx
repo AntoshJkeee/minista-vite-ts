@@ -59,7 +59,7 @@ export const Slider = (props: SliderProps) => {
 			<div className="slider__swiper swiper" data-js-slider-swiper="">
 				<ul className="slider__list swiper-wrapper">
 					{children &&
-						children.map((slide, idx) => (
+						children.map((slide: JSX.Element, idx: number) => (
 							<li className="slider__item swiper-slide" key={idx}>
 								{slide}
 							</li>

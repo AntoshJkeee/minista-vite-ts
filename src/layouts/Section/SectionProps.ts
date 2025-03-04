@@ -5,5 +5,5 @@ export interface SectionProps {
 	description?: string
 	actions?: JSX.Element
 	isActionsHiddenOnMobile?: boolean
-	children: JSX.Element
+	children: JSX.Element | JSX.Element[]
 }

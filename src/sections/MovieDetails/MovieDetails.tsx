@@ -85,8 +85,8 @@ export const MovieDetails = (props: MovieDetailsProps) => {
 							},
 						}}
 					>
-						{reviewItems.map((reviewItem, index) => (
-							<ReviewCard {...reviewItem} key={index} />
+						{reviewItems.map((reviewItem, idx) => (
+							<ReviewCard {...reviewItem} key={idx} />
 						))}
 					</Slider>
 				</div>
